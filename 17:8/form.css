@@ -1,0 +1,18 @@
+fieldset{
+    background-color: #54b0fa;
+    margin-left: 190px;
+    width:200px
+}
+
+legend {
+    background-color: #0a1b73;
+    font-style: italic;
+    color: #54b0fa;
+    text-align: center;
+    font-size: 90px;
+}
+
+.header {
+    text-align: center;
+    font-size: 30px;
+}

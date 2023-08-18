@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<head>
+    <title>Form</title>
+    <link rel="icon" type="image/x-icon" href="https://clideo.com/files/content/twitter-meme-maker-1.png">
+</head>
+<body style="color: rgb(169, 215, 254);" bgcolor="black">
+    <form>
+        <label for="fname">First Name</label>
+        <input type="Text" id="fname"> <br>
+        <label for="lname">Last Name</label>
+        <input type="Text" id="lname"> <br>
+    </form>
+    <br>
+    <hr>
+    <form>
+     <input type="radio" id="OpenHeimer" name="Movie To Watch" value="OpenHeimer">
+     <label for="OpenHeimer">OpenHeimer</label><br>
+     <input type="radio" id="Barbie" name="Movie to watch" value="Barbie">
+     <label for="Barbie">Barbie</label><br>
+    </form>
+    <br>
+    <hr>
+    <form>
+        <form action="/action_page.php" method="post">
+            <label for="p">password</label><br>
+            <input type="password" id="p" name="p" ><br>
+            <label for="uname">User name:</label><br>
+            <input type="text" id="u" name="u" ><br><br>
+            <input type="submit" value="Submit">
+    </form>
+
+    <!-- #for list we use option -->
+    <form>
+        <label for="location">Chose location</label>
+        <select name="Location" id="location">
+        <option name="india">India</option>
+        <option name="banglades">Bangladesh</option>
+        <option name="pakistan">Pakistan</option>
+        <option name="srilanka">srilanka</option>
+        <option name="nepal">Nepal</option>
+        <option name="bhutan">Bhutan</option>
+        <option name="maldives">Maldives</option>
+        <option name="afghanistan">Afghanistan</option>
+        <option name="myanmar">Myanmar</option>
+        <option name="china">China</option>
+        <option name="japan">Japan</option>
+        <option name="korea">Korea</option>
+        <option name="thailand">Thailand</option>
+        </select>
+        <input type="submit">
+
+    </form>
+
+    <!-- #for list we use option for multiple drop down -->
+    <form>
+         <label for="location">Chose Nationality</label>
+        <select name="Nationality" id="Nationality" size="3" multiple>
+        <option name="indian">Indian</option>
+        <option name="canadian">canadian</option>
+        <option name="american">American</option>
+        <option name="australian">Australian</option>
+        <option name="british">British</option>
+        
+        </select>
+        <input type="submit">
+
+    </form>
+
+    <hr>
+    <br>
+
+    <textarea name="Question" rows="5" cols="40">
+       Answer the question:
+       Who is the prime minister of india?
+        </textarea>
+    
+    <button type="button" onclick="alert('Bas bhai hogaya aaj ka , jaa jake chai pio biscut khao')"> Ae Dum hai to Click kar</button>
+
+
+    <!-- 
+    The <fieldset> element is used to group related data in a form.
+
+        The <legend> element defines a caption for the <fieldset> element. -->
+
+    <form>
+        <fieldset>
+            <legend>
+                MY TAB
+            </legend>
+            <label for="Comment">Add comments:</label><br>
+            <input type="text" id="c" name="Comment"><br>
+            <label for="b">Add Your birthdate:</label><br>
+            <input type="date" id="b" name="b"><br><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>        
+
+    <hr>
+    <br>
+
+        <!-- The <datalist> element specifies a list of pre-defined options for an <input> element.
+        Users will see a drop-down list of the pre-defined options as they input data.
+        The list attribute of the <input> element, must refer to the id attribute of the <datalist> element. -->
+
+    <h1>Kya bhai meme dekhega , toh click karna niche ko</h1>
+        <form action="/action_page.php" target="_blank">
+            <input list="Memes">
+            <datalist id="Memes">
+              <option value="Jati rehje">
+              <option value="150 rs dega">
+              <option value="Naah">
+              <option value="Stonks">
+              <option value="Op">
+              <option value="Bhai Bhai">
+              </option>
+            </datalist>
+    </form>       
+    
+    <form>
+        <label>Button</label><input type="button" name="button"><br>
+        <label>checkbox</label><input type="checkbox" name="checkbox">
+        <br>         <label>color</label><input type="color" name="color">
+        <br>  <label>date</label> <input type="date" name="date">
+        <br>  <label>datetime-local</label><input type="datetime-local" name="datetime-local">
+        <br>  <label>email</label><input type="email" name="email">
+        <br>  <label>file</label><input type="file" name="file">
+        <br>  <label>hidden</label><input type="hidden" name="hidden">
+        <br>  <label>image</label><input type="image" name="image">
+        <br>  <label>month</label><input type="month" name="month">
+        <br>  <label>number</label><input type="number" name="number">
+        <br>  <label>password</label><input type="password" name="password">
+        <br>  <label>radio</label><input type="radio" name="radio">
+        <br>  <label>range</label><input type="range" name="range">
+        <br>  <label>reset</label><input type="reset" name="reset">
+        <br>  <label>search</label><input type="search" name="search">
+        <br>  <label>submit</label><input type="submit" name="submit">
+        <br>  <label>tel</label><input type="tel" name="tel">
+        <br>  <label>text</label><input type="text" name="text">
+        <br>  <label>time</label><input type="time" name="time">
+        <br>  <label>url</label><input type="url" name="url">
+        <br>  <label>week</label><input type="week" name="week">
+
+    </form>
+
+
+    <hr>
+    <hr>
+    <h1>अधः विडियो प्रदर्शितः अस्ति  <a href="https://www.instagram.com/tattvam.pdeu/"> <b> तत्वम् - संस्कृत क्लब </b> </a> </h1>
+    <video width="320" height="540" controls>
+        <source src="video.mp4" type="video/mp4">
+    </video>    
+
+    <br>
+    <h1>AUDIO NICHE HAI </h1>
+    <audio controls autoplay>
+        <source src="emotional-damage-meme.mp3" type="audio/mpeg">    
+    </audio>
+
+    <br>
+    <h1>YOUTUBE VIDEO</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/2xZlXhIvOPc" frameborder="0" allowfullscreen></iframe>
+    </iframe> 
+
+</body>
+</html>
