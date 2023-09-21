@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>String Operators</title>
+        <style>
+            body {
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: rgb(226, 254, 255);
+                color: rgb(2, 17, 17);
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <label for="str1"> Enter a string (str1) </label>
+        str1 = <input id="str1Input" name="str1" type="text">
+        <br>
+        <br>
+        <label for="str2"> Enter another string (str2) </label>
+        str2 = <input id="str2Input" name="str2" type="text">
+        <br>
+        <br>
+        <br>
+        <button onclick="performStringOperations()">Join</button>
+
+        <p> Concatenation (str1 + str2): <span id="concatResult"></span>
+        </p>
+
+        <script type="text/javascript">
+
+            function performStringOperations() {
+
+                var str1Input = document.getElementById('str1Input');
+                var str2Input = document.getElementById('str2Input');
+
+                var str1 = str1Input.value;
+                var str2 = str2Input.value;
+
+                var concatResult = str1 + str2;
+
+                document.getElementById('concatResult').textContent = concatResult;
+            }
+
+        </script>
+    
+    </body>
+</html>
