@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function/title>
+    <style>
+        body {
+            background-color: #d8dafe;
+            font-family: sans-serif;
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Custom Function in JS</h1>
+    <label for="number">Enter a number:</label>
+    num = <input id="numberInput" name="number" type="text">
+    <br>
+    <br>
+    <button onclick="calculateSquare()">Calculate Square</button>
+
+    <div id="output"></div>
+
+    <script type="text/javascript">
+
+        function calculateSquare() {
+            var numberInput = document.getElementById('numberInput');
+            var outputDiv = document.getElementById('output');
+
+            var num = parseFloat(numberInput.value);
+
+            if (!isNaN(num)) {
+                var square = num * num;
+                outputDiv.innerHTML = '<p> Square of ' + num + ' is ' + square + '</p>';
+            } else {
+                outputDiv.innerHTML = '<p>Please enter a valid number.</p>';
+            }
+        }
+
+    </script>
+</body>
+</html>
