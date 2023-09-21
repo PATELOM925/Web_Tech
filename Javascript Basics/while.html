@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>While Loop</title>
+    </head>
+    <body>
+        <h1>While Loop Example</h1>
+        <label for="count"> Enter an integer: </label>
+        <input id="countInput" name="count" type="text">
+        <button onclick="displayNumbers()">Display Numbers</button>
+
+        <div id="result"></div>
+
+        <script type="text/javascript">
+
+            function displayNumbers() {    
+                var countInput = document.getElementById('countInput');
+                var resultDiv = document.getElementById('result');
+
+                var count = parseInt(countInput.value);
+
+                if (!isNaN(count)) {
+                    var numbersResult = '<p>Counting from 1 to ' + count + ':</p>';
+                    var currentNumber = 1;
+
+                    while (currentNumber <= count) {
+                        numbersResult += currentNumber + ', ';
+                        currentNumber++;
+                    }
+
+                    resultDiv.innerHTML = numbersResult.slice(0, -2); // Remove the trailing comma and space
+                } else {
+                    resultDiv.innerHTML = '<p>Please enter a valid integer.</p>';
+                }
+            }
+
+            // Listen for the Enter key press event
+            document.getElementById('countInput').addEventListener('keypress', function(event) {
+                if (event.key === 'Enter') {
+                    displayNumbers();
+                }
+            });
+
+        </script>
+        
+    </body>
+</html>
