@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Do-While Loop</title>
+        <style>
+            body {
+                background-color: rgb(207, 255, 239);
+                font-size: 16px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Do-While Loop Example</h1><br>
+        <label for="number"> Enter an integer: </label>
+        <input id="numberInput" name="number" type="text">
+        <br>
+        <br>
+        <button onclick="calculateFactorial()">Calculate Factorial</button>
+
+        <div id="result"></div>
+
+        <script type="text/javascript">
+
+            function calculateFactorial() {    
+                var numberInput = document.getElementById('numberInput');
+                var resultDiv = document.getElementById('result');
+
+                var number = parseInt(numberInput.value);
+
+                if (!isNaN(number) && number >= 0) {
+                    var factorialResult = 1;
+                    var currentNumber = 1;
+
+                    do {
+                        factorialResult *= currentNumber;
+                        currentNumber++;
+                    } while (currentNumber <= number);
+
+                    resultDiv.innerHTML = '<p>Factorial of ' + number + ' is: ' + factorialResult + '</p>';
+                } else {
+                    resultDiv.innerHTML = '<p>Please enter a non-negative integer.</p>';
+                }
+            }
+
+            // Listen for the Enter key press event
+            document.getElementById('numberInput').addEventListener('keypress', function(event) {
+                if (event.key === 'Enter') {
+                    calculateFactorial();
+                }
+            });
+
+        </script>
+        
+    </body>
+</html>
