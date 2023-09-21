@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IF ELSE</title>
+    </head>
+    <body>
+        <h1>IF ELSE IN JS</h1>
+        <label for="x"> Enter any integer </label>
+        x = <input id="xInput" name="x" type="text">
+        <button onclick="checkValue()">Enter</button>
+
+        <div id="result"></div>
+
+        <script type="text/javascript">
+
+            function checkValue() {    
+                var xInput = document.getElementById('xInput');
+                var resultDiv = document.getElementById('result');
+
+                var x = parseInt(xInput.value);
+
+                if (x > 10) {
+                    resultDiv.innerHTML = '<p>x is greater than 10</p>';
+                } else {
+                    resultDiv.innerHTML = '<p>x is less than or equal to 10</p>';
+                }
+            }
+
+            // Listen for the Enter key press event
+            document.getElementById('xInput').addEventListener('keypress', function(event) {
+                if (event.key === 'Enter') {
+                    checkValue();
+                }
+            });
+
+        </script>
+        
+    </body>
+</html>
