@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Operators</title>
+    </head>
+
+    <body>
+
+        <label for="a"> Enter a </label>
+        a = <input id="aInput" name="a" type="text">
+        <label for="b"> Enter b </label>
+        b = <input id="bInput" name="b" type="text">
+        <button onclick="performOperators()">Enter</button>
+
+        <p>Results:</p>
+
+        <ul>
+            <li>Addition (a + b): <span id="addResult"></span></li>
+            <li>Subtraction (a - b): <span id="subResult"></span></li>
+            <li>Multiplication (a * b): <span id="mulResult"></span></li>
+            <li>Division (a / b): <span id="divResult"></span></li>
+            <li>Modulus (a % b): <span id="modResult"></span></li>
+            <li>Assignment (a = b): <span id="assignResult"></span></li>
+            <li>Equality (a == b): <span id="eqResult"></span></li>
+            <li>Inequality (a != b): <span id="neqResult"></span></li>
+            <li>Greater than (a > b): <span id="gtResult"></span></li>
+            <li>Less than (a < b): <span id="ltResult"></span></li>
+            <li>Greater than or equal (a >= b): <span id="gteResult"></span></li>
+            <li>Less than or equal (a <= b): <span id="lteResult"></span></li>
+            <li>Logical AND (a && b): <span id="andResult"></span></li>
+            <li>Logical OR (a || b): <span id="orResult"></span></li>
+            <li>Logical NOT (!a): <span id="notResult"></span></li>
+            <li>Increment (a++): <span id="incResult"></span></li>
+            <li>Decrement (a--): <span id="decResult"></span></li>
+            <li>Conditional (a > b ? "A is greater" : "B is greater"): <span id="condResult"></span></li>
+        </ul>
+
+        <script type="text/javascript">
+
+            function performOperators() {
+
+                var aInput = document.getElementById('aInput');
+                var bInput = document.getElementById('bInput');
+
+                var a = parseFloat(aInput.value);
+                var b = parseFloat(bInput.value);
+
+                document.getElementById('addResult').textContent = a + b;
+                document.getElementById('subResult').textContent = a - b;
+                document.getElementById('mulResult').textContent = a * b;
+                document.getElementById('divResult').textContent = a / b;
+                document.getElementById('modResult').textContent = a % b;
+                document.getElementById('assignResult').textContent = (a = b);
+                document.getElementById('eqResult').textContent = (a == b);
+                document.getElementById('neqResult').textContent = (a != b);
+                document.getElementById('gtResult').textContent = (a > b);
+                document.getElementById('ltResult').textContent = (a < b);
+                document.getElementById('gteResult').textContent = (a >= b);
+                document.getElementById('lteResult').textContent = (a <= b);
+                document.getElementById('andResult').textContent = (a && b);
+                document.getElementById('orResult').textContent = (a || b);
+                document.getElementById('notResult').textContent = (!a);
+                document.getElementById('incResult').textContent = (a++);
+                document.getElementById('decResult').textContent = (a--);
+                document.getElementById('condResult').textContent = (a > b ? "A is greater" : "B is greater");
+            }
+
+        </script>
+    
+    </body>
+</html>
